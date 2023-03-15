@@ -13,8 +13,8 @@ function App() {
         <Header/>
         <Routes basename= "NIGHT-OUT">
           <Route path="/NIGHT-OUT/bookNow" element={<BookNow />} />
-          <Route path="/Night-Out/about" element={<About />} />
-          <Route path="/Night-Out/contact" element={<Contact />} />
+          <Route path="/NIGHT-OUT/about" element={<About />} />
+          <Route path="/NIGHT-OUT/contact" element={<Contact />} />
         </Routes>
       </div>
     </Router>
