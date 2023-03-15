@@ -1,9 +1,23 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
+import BookNow from './components/pages/BookNow';
+import About from './components/pages/About';
+import Contact from './components/pages/Contact';
 
 
 function App() {
   return (
-   <Header/>
+   <Router>
+      <div>
+        <Header/>
+        <Routes basename= "NIGHT-OUT">
+          <Route path="/NIGHT-OUT/bookNow" element={<BookNow />} />
+          <Route path="/Night-Out/about" element={<About />} />
+          <Route path="/Night-Out/contact" element={<Contact />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
