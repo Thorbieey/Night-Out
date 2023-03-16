@@ -1,16 +1,63 @@
-const people = [
+import { useState } from "react"
+import PackageBronze from "./PackageBronze"
+import PackageSilver from "./PackageSilver"
+import PackageGold from "./PackageGold"
+
+
+// switch (selection,location) {
+//   case selection === "Bronze": return <PackageBronze location = {{location:location.name}}/> 
+//     case selection === "Silver": return <PackageSilver location = {{location:location.name}}/> 
+//     case selection === "Gold": return <PackageGold location = {{location:location.name}}/> 
+
+//   default:
+//     break;
+// }
+
+const selections = [
     {
-      name: 'Lindsay Walton',
-      role: 'Front-end Developer',
+      name: 'Bronze',
+      selection: 'Book a Gig',
+      selection2: 'Book a Restaurant',
       imageUrl:
         'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-      twitterUrl: '#',
-      linkedinUrl: '#',
+     
+    },
+    {
+      name: 'Silver',
+      selection: 'Book a Gig',
+      selection2: 'Book Accommodation',
+      imageUrl:
+        'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+     
+    },
+    {
+      name: 'Gold',
+      selection: 'Book a Gig',
+      selection2: 'Book Accommodation',
+      selection3: "Book a Restaurant",
+      imageUrl:
+        'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+     
     },
     // More people...
   ]
   
-  export default function Example() {
+  export default function Example({location}) {
+    const [selection, setSelections] = useState("")
+
+    if (selection === "Bronze") { 
+  return <PackageBronze location = {{location:location.location}}/> 
+ 
+} if (selection === "Silver") {
+  return <PackageSilver location = {{location:location.location}}/> 
+
+}
+if (selection === "Gold") {
+  return <PackageGold location = {{location:location.location}}/> 
+
+}
+  
+
     return (
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -25,22 +72,19 @@ const people = [
             role="list"
             className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
           >
-            {people.map((person) => (
-              <li key={person.name}>
-                <img className="aspect-[3/2] w-full rounded-2xl object-cover" src={person.imageUrl} alt="" />
-                <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">{person.name}</h3>
-                <p className="text-base leading-7 text-gray-600">{person.role}</p>
+            {selections.map((selections) => (
+              <li key={selections.name}>
+                <img className="aspect-[3/2] w-full rounded-2xl object-cover" src={selections.imageUrl} alt="" />
+                <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">{selections.name}</h3>
                 <ul role="list" className="mt-6 flex gap-x-6">
                   <li>
-                    <a href={person.twitterUrl} className="text-gray-400 hover:text-gray-500">
                       <span className="sr-only">Twitter</span>
                       <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
                       </svg>
-                    </a>
                   </li>
                   <li>
-                    <a href={person.linkedinUrl} className="text-gray-400 hover:text-gray-500">
+                  <h5>Location: {location.location}</h5>
                       <span className="sr-only">LinkedIn</span>
                       <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                         <path
@@ -49,10 +93,21 @@ const people = [
                           clipRule="evenodd"
                         />
                       </svg>
-                    </a>
+                    <button
+               type="button" onClick={function Selection (event) {
+                event.preventDefault()
+                setSelections(selections.name)
+                console.log(selections.name)
+               }}
+               className="rounded-full bg-indigo-600 py-2 px-3.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+             >
+               Select
+             </button>
                   </li>
-                </ul>
+              </ul>
               </li>
+              
+              
             ))}
           </ul>
         </div>
