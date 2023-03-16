@@ -11,11 +11,21 @@ function App() {
    <Router>
       <div>
         <Header/>
-        <Routes basename= "NIGHT-OUT">
-          <Route path="/NIGHT-OUT/bookNow" element={<BookNow />} />
-          <Route path="/NIGHT-OUT/about" element={<About />} />
-          <Route path="/NIGHT-OUT/contact" element={<Contact />} />
-        </Routes>
+        {/* <Routes>
+          <Route path="/" element={<Dashboard />}>
+            <Route
+              path="messages"
+              element={<DashboardMessages />}
+            />
+            <Route path="tasks" element={<DashboardTasks />} />
+          </Route>
+          <Route path="about" element={<AboutPage />} />
+        </Routes> */}
+        <Routes >
+          <Route path="/" element={<BookNow />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>    
       </div>
     </Router>
   );
