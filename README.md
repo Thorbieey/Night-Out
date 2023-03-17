@@ -1,70 +1,135 @@
-# Getting Started with Create React App
+# Night Out
+  
+## Description 
+  
+Night out helps users create the perfect night out by hosting all their plans in one place.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You've heard of event planners? Well this is your free NIGHT OUT planner. It helps you find out when and where your favourite artist is playing and then instantly recommends accomodation and restaurants local to the venue. Bringing your plans together in a few easy clicks ensuring you have the best night out. **React | Javascript | HTML | Tailwind | Netlify**
 
-## Available Scripts
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-In the project directory, you can run:
+---
+## Table of Contents
 
-### `npm start`
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Technology](#technology)
+* [License](#license)
+* [Contributors](#contributors)
+* [Credits](#credits)
+* [Questions](#questions)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Clone repo
 
-### `npm test`
+        git clone https://github.com/AnnaGilthorpe/night-out.git
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Initialize npm and install dependencies
 
-### `npm run build`
+        npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Run application in command line
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+        npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
+## Usage
 
-### `npm run eject`
+Nicola, James's friend, is a huge Sparks fan. She has bought tickets for every one of their European gigs but is now spending alot of time researching places to stay in the same city.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+With Night Out Nicola can:-
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Search for the Sparks gig in the location she wishes Buy her tickets
+Peruse the available accomodation local to that venue
+Book her accomodation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+It is done when:-
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Nicola sees her tickets options for each city
+Nicola sees her accomodation for each city
 
-## Learn More
+### Repository
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* The URL of the GitHub repository: 
+[https://github.com/AnnaGilthorpe/night-out.git](https://github.com/AnnaGilthorpe/night-out.git)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* The URL of Night-Out netlify deployment : 
+[https://spectacular-cassata-ebbb20.netlify.app/](https://spectacular-cassata-ebbb20.netlify.app/)
 
-### Code Splitting
+### Screenshots/Demo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![Screenshot-1](./public/assets/images/screenshot-1.jpg)
+![Screenshot-2](./public/assets/images/screenshot-2.jpg)
+![Screenshot-3](./public/assets/images/screenshot-3.jpg)
+![Gif]()
 
-### Analyzing the Bundle Size
+---
+## Technology
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- HTML
+- CSS
+- JavaScript
+- React
+- Tailwind
+- Ticketmaster API
+- Booking.com API
+- theForkTheSpoon API
 
-### Making a Progressive Web App
+Our market research revealed a real world problem in the form of the lack of an app which combined the ability to book concert tickets and then book accomodation in the area local to the concert venue. We set out to do this by using Ticketmaster's API combined with Airbnb's API. Unfortunately, Airbnb are very precious about who uses their API, so we eventually decided to use Booking.com's API via the website Rapidapi.com.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The process is in small steps: first choose the area you wish to see your favourite band in; then search for the name of the band or artist you wish to see. If your chosen artist is performing on that area in the near future, then this information is returned from the Ticketmaster API and you can click through and purchase tickets from Ticketmaster.
 
-### Advanced Configuration
+Should the journey to see your chosen act be a long one, the option is on the same page to search for accomodation in the vicinity of the concert venue. There is a calendar facility for the user to specify checking in and checking out dates.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+There is also an option, for users that do not have specific band in mind, to 'Find Artists' playing in the location the user has selected.
 
-### Deployment
+The location search is saved via local storage and added to a button on the homepage to make it easy for users to come back to on their next use of the site.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
+## License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-### `npm run build` fails to minify
+This application is covered under: **The MIT License**. Learn more about [choosing licenses](https://choosealicense.com/licenses/).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+---
+## Contributors
+
+When contributing to this repository, please first discuss the change you wish to make via email, issue, linkedIn or any other method with the owner of this repository before making a change. 
+
+### Pull Request Process
+
+1. Fork the repository
+
+2. Create a feature branch.
+
+        git checkout -b name/feature/new-feature
+
+3. Add and commit your changes.
+
+        git add .
+        git commit -m "short description of feature"
+
+4. Push your contribution to the created branch.
+
+        git push
+
+5. Submit a new Pull Request on GitHub.
+
+---
+## Credits
+
+- [Learn about path.js](https://nodejs.org/api/path.html#pathjoinpaths)
+
+---
+## Questions
+
+Got any additional questions/enquiries? Reach out to:
+
+- [Anna Gilthorpe](https://github.com/AnnaGilthorpe)
+- [Ashey Cook](https://github.com/ashcookdev)
+- [James Fahey](https://github.com/bertiemoogle)
+- [Tobi Olajide](https://github.com/Thorbieey)
