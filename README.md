@@ -38,10 +38,8 @@ You've heard of event planners? Well this is your free NIGHT OUT planner. It hel
 ---
 ## Usage
 
-### User Story
 Nicola, James's friend, is a huge Sparks fan. She has bought tickets for every one of their European gigs but is now spending alot of time researching places to stay in the same city.
 
-### User Requirement
 With Night Out Nicola can:-
 
 Search for the Sparks gig in the location she wishes Buy her tickets
@@ -63,9 +61,9 @@ Nicola sees her accomodation for each city
 
 ### Screenshots/Demo
 
-![Screenshot-1]()
-![Screenshot-2]()
-![Screenshot-3]()
+![Screenshot-1](./public/assets/images/screenshot-1.jpg)
+![Screenshot-2](./public/assets/images/screenshot-2.jpg)
+![Screenshot-3](./public/assets/images/screenshot-3.jpg)
 ![Gif]()
 
 ---
