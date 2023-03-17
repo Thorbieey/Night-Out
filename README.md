@@ -57,7 +57,7 @@ Nicola sees her accomodation for each city
 [https://github.com/AnnaGilthorpe/night-out.git](https://github.com/AnnaGilthorpe/night-out.git)
 
 * The URL of Night-Out netlify deployment : 
-[https://spectacular-cassata-ebbb20.netlify.app/](https://spectacular-cassata-ebbb20.netlify.app/)
+[https://night-out-vip.netlify.app/](https://night-out-vip.netlify.app/)
 
 ### Screenshots/Demo
 
