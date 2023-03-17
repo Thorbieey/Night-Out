@@ -16,7 +16,7 @@ import PackageGold from "./PackageGold"
 const selections = [
     {
       name: 'Bronze Package',
-      description: 'Live gig + restaurant booking',
+      des: 'Live gig + restaurant booking',
       selection: 'Book a Gig',
       selection2: 'Book a Restaurant',
       imageUrl:
@@ -25,7 +25,7 @@ const selections = [
     },
     {
       name: 'Silver Package',
-      description: 'Live gig + accomodation booking',
+      des: 'Live gig + accomodation booking',
       selection: 'Book a Gig',
       selection2: 'Book Accommodation',
       imageUrl:
@@ -34,7 +34,7 @@ const selections = [
     },
     {
       name: 'Gold Package',
-      description: 'Live gig + restaurant booking + accomodation booking + travel information',
+      des: 'Live gig + restaurant booking + accomodation booking + travel information',
       selection: 'Book a Gig',
       selection2: 'Book Accommodation',
       selection3: "Book a Restaurant",
@@ -75,9 +75,10 @@ if (selection === "Gold") {
             className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
           >
             {selections.map((selections) => (
-              <li key={selections.name}>
+              <li key={selections}>
                 <img className="aspect-[3/2] w-full rounded-2xl object-cover" src={selections.imageUrl} alt="" />
                 <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">{selections.name}</h3>
+                <h5 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">{selections.des}</h5>
                 <ul role="list" className="mt-6 flex gap-x-6">
                   <li>
                       <span className="sr-only">Twitter</span>
