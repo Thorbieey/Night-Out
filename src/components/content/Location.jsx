@@ -1,6 +1,6 @@
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 import { useState } from 'react'
-import PackageSelection from '../content/PackageSelection'
+import PackageSelection from './PackageSelection'
 
 
 const locations = [
