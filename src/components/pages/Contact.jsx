@@ -2,7 +2,6 @@ import React, { useRef } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {MdOutlineEmail} from "react-icons/md";
 import {RiMessengerLine} from "react-icons/ri";
-import {RxTwitterLogo} from "react-icons/rx";
 import emailjs from "emailjs-com";
 
 // Contact page with functioning contact form using Emailjs. The phone number isn't my real number - I don't want that to be accessible to people I don't know.
@@ -40,7 +39,7 @@ function Contact() {
             <a href="https://m.me/night.out" target="_blank" rel="noreferrer" className="contactDetails">Message Us</a>
           </article>
           <article classname="contact-option">
-            <RxTwitterLogo className="contact-icon"/>
+            
             <h4>Twitter</h4>
             <h5>@NightOut</h5>
             <a href="https://twitter.com/NightOut" target="_blank" rel="noreferrer" className="contactDetails">Tweet Us</a>

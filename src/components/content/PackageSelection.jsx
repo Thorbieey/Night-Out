@@ -15,28 +15,31 @@ import PackageGold from "./PackageGold"
 
 const selections = [
     {
-      name: 'Bronze',
+      name: 'Bronze Package',
+      des: 'Live gig + restaurant booking',
       selection: 'Book a Gig',
       selection2: 'Book a Restaurant',
       imageUrl:
-        'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+        '/assets/background-images/Restaurant3.png',
      
     },
     {
-      name: 'Silver',
+      name: 'Silver Package',
+      des: 'Live gig + accomodation booking',
       selection: 'Book a Gig',
       selection2: 'Book Accommodation',
       imageUrl:
-        'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+        '/assets/background-images/Hotel2.png',
      
     },
     {
-      name: 'Gold',
+      name: 'Gold Package',
+      des: 'Live gig + restaurant booking + accomodation booking + travel information',
       selection: 'Book a Gig',
       selection2: 'Book Accommodation',
       selection3: "Book a Restaurant",
       imageUrl:
-        'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+        '/assets/background-images/band5.png',
      
     },
     // More people...
@@ -62,10 +65,9 @@ if (selection === "Gold") {
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our team</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Build Your Night Out Package</h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              We’re a dynamic group of individuals who are passionate about what we do and dedicated to delivering the
-              best results for our clients.
+              Now you've chosen where you would like your night out to be, it's time to select the package that suits you.
             </p>
           </div>
           <ul
@@ -73,9 +75,10 @@ if (selection === "Gold") {
             className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
           >
             {selections.map((selections) => (
-              <li key={selections.name}>
+              <li key={selections}>
                 <img className="aspect-[3/2] w-full rounded-2xl object-cover" src={selections.imageUrl} alt="" />
                 <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">{selections.name}</h3>
+                <h5 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">{selections.des}</h5>
                 <ul role="list" className="mt-6 flex gap-x-6">
                   <li>
                       <span className="sr-only">Twitter</span>
@@ -101,7 +104,7 @@ if (selection === "Gold") {
                }}
                className="rounded-full bg-indigo-600 py-2 px-3.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
              >
-               Select
+               Book now
              </button>
                   </li>
               </ul>
