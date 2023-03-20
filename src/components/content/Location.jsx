@@ -6,35 +6,45 @@ import PackageSelection from './PackageSelection'
 const locations = [
   {
     name: 'London',
-  icon: CloudArrowUpIcon,
+    icon: CloudArrowUpIcon,
+    imageURL: '/assets/locations/London.png',
   },
   {
     name: 'South',
     icon: LockClosedIcon,
+    imageURL: '/assets/locations/South.png',
+
+
   },
   {
     name: 'Wales and North West',
     icon: ServerIcon,
+    imageURL: '/assets/locations/NorthWest.png',
   },
   {
     name: 'North and North East',
     icon: CloudArrowUpIcon,
+    imageURL: '/assets/locations/NorthEast.png',
   },
   {
     name: 'Midlands and Central',
     icon: LockClosedIcon,
+    imageURL: '/assets/locations/Midlands.png',
   },
   {
     name: 'Scotland.',
     icon: ServerIcon,
+    imageURL: '/assets/locations/Scotland.png',
   },
   {
     name: 'Northern Ireland.',
     icon: ServerIcon,
+    imageURL: '/assets/locations/NIreland.png',
   },
   {
     name: 'All of Ireland',
     icon: ServerIcon,
+    imageURL: '/assets/locations/Ireland.png',
   },
 
 ]
@@ -46,7 +56,7 @@ if (click === "click") {
   return <> <PackageSelection location = {{location: location}}/>  </>
 }
 
-  return (
+  return ( 
     
     <div className="overflow-hidden bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -54,6 +64,8 @@ if (click === "click") {
           <div className="lg:pr-8 lg:pt-4">
             <div className="lg:max-w-lg">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center">Pick Your Location</h2>
+
+              
               
              
               <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
@@ -85,5 +97,6 @@ if (click === "click") {
         </div>
       </div>
     </div>
+    
   )
 }
