@@ -32,7 +32,7 @@ const locations = [
     imageURL: '/assets/locations/Midlands.png',
   },
   {
-    name: 'Scotland.',
+    name: 'Scotland',
     icon: ServerIcon,
     imageURL: '/assets/locations/Scotland.png',
   },
@@ -70,17 +70,20 @@ if (click === "click") {
              
               <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                 {locations.map((locations) => (
+                  
                   <div key={locations.name} className="relative pl-9">
-                    <h1>{locations.name}</h1>
+                    <img className="aspect-[3/2] w-full rounded-2xl object-cover" src={locations.imageURL} alt="" />
+                    <h2></h2>
+                    
                    <button
           type="button" onClick={function location(event) {
             event.preventDefault()
             setLocation(locations.name)
             setClick("click")
           }}
-          className="rounded-full bg-indigo-600 py-2 px-3.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          className="rounded-full bg-gray-600 py-2 px-3.5 text-sm uppercase font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
         >
-          Select
+          {locations.name}
         </button>
                   </div>
                 ))}
