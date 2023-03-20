@@ -5,8 +5,10 @@
 
 
 /** CONTACT PAGE **/
+  
 
 body {
+    background-image: url('https://unsplash.com/photos/aWXVxy8BSzc');
     background-color: rgb(5, 5, 62) !important;
     font-family: 'Raleway', sans-serif !important;
     color: white !important;
@@ -68,9 +70,7 @@ article:hover {
     opacity: 1;
 }
 
-.btn {
-    width: 200px;
-}
+
 
 .contact-icon {
     margin: 0 auto;

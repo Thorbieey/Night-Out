@@ -5,11 +5,17 @@ import BookNow from './components/pages/BookNow';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
 
+import'./App.css';
+
+
+
 
 function App() {
   return (
+    
    <Router>
       <div>
+        
         <Header/>
         {/* <Routes>
           <Route path="/" element={<Dashboard />}>
@@ -21,6 +27,7 @@ function App() {
           </Route>
           <Route path="about" element={<AboutPage />} />
         </Routes> */}
+        
         <Routes >
           <Route path="/" element={<BookNow />} />
           <Route path="/about" element={<About />} />
@@ -28,6 +35,7 @@ function App() {
         </Routes>    
       </div>
     </Router>
+ 
   );
 }
 
