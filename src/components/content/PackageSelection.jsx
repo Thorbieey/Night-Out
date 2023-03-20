@@ -73,11 +73,13 @@ if (selection === "Gold") {
         backgroundSize:'cover',
         backgroundImage: 'url(" /assets/background-images/Band3.png")'
       }}></div>
-      <div className="bg-white py-24 sm:py-32">
+      <div className="py-24 sm:py-32">
+        
+
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center">Build Your Night Out Package</h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600 text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-white-900 sm:text-4xl text-center">Build Your Night Out Package</h2>
+            <p className="mt-6 text-lg leading-8 text-white-600 text-center">
               Now you've chosen where you would like your night out to be, it's time to select the package that suits you.
             </p>
           </div>
