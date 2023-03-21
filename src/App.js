@@ -4,22 +4,12 @@ import Header from './components/Header';
 import BookNow from './components/pages/BookNow';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
-
-
-import'./App.css';
-
-
-
+import './App.css';
 
 function App() {
-  return (
-    
-   <Router>
-  
-        
-        <Header/>
-      
-       
+  return ( 
+   <Router>   
+        <Header/>  
         {/* <Routes>
           <Route path="/" element={<Dashboard />}>
             <Route
@@ -35,11 +25,8 @@ function App() {
           <Route path="/" element={<BookNow />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-        </Routes>    
-      
-    </Router>
-  
- 
+        </Routes>          
+    </Router> 
   );
 }
 

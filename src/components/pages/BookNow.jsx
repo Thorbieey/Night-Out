@@ -10,8 +10,8 @@ export default function BookNow() {
         height: '500px',
         backgroundSize:'cover',
         backgroundImage: 'url(" /assets/background-images/Band4.png")'
-      }}></div>
-        {/* <img src="/assets/images/banner.png" className="banner" alt="raised hands in a night club"/> */}
+        }}>
+      </div>
        <Location/>
     </div>
     );

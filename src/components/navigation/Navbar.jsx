@@ -1,38 +1,37 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon, StarIcon } from '@heroicons/react/24/outline'
 import { NavLink } from 'react-router-dom';
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-white shadow">
+    <Disclosure as="nav" className="bg-cyan-600 shadow">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-8xl px-2 sm:px-2 lg:px-2">
             <div className="flex h-16 justify-between">
               <div className="flex">
                 <div className="flex flex-shrink-0 items-center">
-                  <h1>Night Out</h1>
+                  <h1 className="inline-flex items-center px-4 py-0 text-5xl font-sans font-extrabold text-sky-200 drop-shadow-[0_1.2px_1.2px_rgba(0,0,1,0.9)]">Night Out</h1>
                 </div>
-                <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-                  {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
+                <div className="hidden sm:ml-6 sm:flex sm:space-x-8 items-end">
                   <NavLink
                       to="/"
-                      className="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
+                      className="inline-flex items-center px-2 py-2 text-xl font-bold text-gray-50 hover:text-sky-700 hover:text-2xl hover:drop-shadow-lg no-underline"
                       >
                         Book Now
                   </NavLink>
                   <NavLink
                       to="/about"
-                      className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                      className="inline-flex items-center px-2 py-2 text-xl font-bold text-gray-50 hover:text-sky-700 hover:text-2xl hover:drop-shadow-lg no-underline"
                       >
                         About
                   </NavLink>
                   <NavLink
                       to="/contact"
-                      className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                      className="inline-flex items-center px-2 py-2 text-xl font-bold text-gray-50 hover:text-sky-700 hover:text-2xl hover:drop-shadow-lg no-underline"
                       >
                         Contact
                   </NavLink>
@@ -44,11 +43,7 @@ export default function Navbar() {
                   <div>
                     <Menu.Button className="flex rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                       <span className="sr-only">Open user menu</span>
-                      <img
-                        className="h-8 w-8 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt=""
-                      />
+                      <StarIcon className="h-7 w-7 stroke-2 fill-blue-200 text-sky-700"/>
                     </Menu.Button>
                   </div>
                   <Transition
@@ -60,14 +55,17 @@ export default function Navbar() {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                   >
-                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none no-underline">
                       <Menu.Item>
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700 no-underline')}
                           >
-                            Your fav artists
+                             <div className= "flex flex-wrap content-center">
+                              <StarIcon className="h-7 w-7 stroke-2 fill-blue-200 text-sky-700"/>
+                              <p className="my-0 ml-2 text-sky-700 leading-3 align-bottom">Artists</p>
+                             </div>
                           </a>
                         )}
                       </Menu.Item>
@@ -75,9 +73,12 @@ export default function Navbar() {
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700 no-underline')}
                           >
-                            Your fav restaurants
+                            <div className= "flex flex-wrap content-center">
+                              <StarIcon className="h-7 w-7 stroke-2 fill-blue-200 text-sky-700"/>
+                              <p className="my-0 ml-2 text-sky-700 leading-3 align-bottom">Restaurants</p>
+                            </div>
                           </a>
                         )}
                       </Menu.Item>
