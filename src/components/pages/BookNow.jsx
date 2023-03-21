@@ -9,7 +9,7 @@ export default function BookNow() {
         width: '1500px',
         height: '500px',
         backgroundSize:'cover',
-        backgroundImage: 'url(" /assets/background-images/Band4.png")'
+        backgroundImage: 'url(" /assets/images/background-images/Band4.png")'
         }}>
       </div>
        <Location/>

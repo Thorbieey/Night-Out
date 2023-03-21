@@ -7,44 +7,44 @@ const locations = [
   {
     name: 'London',
     icon: CloudArrowUpIcon,
-    imageURL: '/assets/locations/London.png',
+    imageURL: '/assets/images/locations/London.png',
   },
   {
     name: 'South',
     icon: LockClosedIcon,
-    imageURL: '/assets/locations/South.png',
+    imageURL: '/assets/images/locations/South.png',
 
 
   },
   {
     name: 'Wales and North West',
     icon: ServerIcon,
-    imageURL: '/assets/locations/NorthWest.png',
+    imageURL: '/assets/images/locations/NorthWest.png',
   },
   {
     name: 'North and North East',
     icon: CloudArrowUpIcon,
-    imageURL: '/assets/locations/NorthEast.png',
+    imageURL: '/assets/images/locations/NorthEast.png',
   },
   {
     name: 'Midlands and Central',
     icon: LockClosedIcon,
-    imageURL: '/assets/locations/Midlands.png',
+    imageURL: '/assets/images/locations/Midlands.png',
   },
   {
     name: 'Scotland',
     icon: ServerIcon,
-    imageURL: '/assets/locations/Scotland.png',
+    imageURL: '/assets/images/locations/Scotland.png',
   },
   {
     name: 'Northern Ireland.',
     icon: ServerIcon,
-    imageURL: '/assets/locations/NIreland.png',
+    imageURL: '/assets/images/locations/NIreland.png',
   },
   {
     name: 'All of Ireland',
     icon: ServerIcon,
-    imageURL: '/assets/locations/Ireland.png',
+    imageURL: '/assets/images/locations/Ireland.png',
   },
 
 ]

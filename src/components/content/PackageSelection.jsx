@@ -22,7 +22,7 @@ const selections = [
       selection: 'Book a Gig',
       selection2: 'Book a Restaurant',
       imageUrl:
-        '/assets/background-images/Restaurant3.png',
+        '/assets/images/background-images/Restaurant3.png',
      
     },
     {
@@ -31,7 +31,7 @@ const selections = [
       selection: 'Book a Gig',
       selection2: 'Book Accommodation',
       imageUrl:
-        '/assets/background-images/Hotel2.png',
+        '/assets/images/background-images/Hotel2.png',
      
     },
     {
@@ -41,7 +41,7 @@ const selections = [
       selection2: 'Book Accommodation',
       selection3: "Book a Restaurant",
       imageUrl:
-        '/assets/background-images/band5.png',
+        '/assets/images/background-images/band5.png',
      
     },
     // More people...
