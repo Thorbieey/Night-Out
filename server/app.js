@@ -11,7 +11,7 @@ mongoose.connect(dbaccess)
 
 app.set("view engine", "ejs");
 app.set("views", "pages");
-
+console.log("test")
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/index", (req, res) => {
@@ -21,7 +21,8 @@ app.get("/index", (req, res) => {
 app.get("/feedback", (req, res) => {
     Feedback.find().sort({ createdAt: -1 })
     .then((result) => {
-        res.render("index", { title: "All Blogs", feedback: result })
+        console.log(result)
+        // res.render("index", { title: "All Blogs", feedback: result })
     })
     .catch((err) => {
         console.log(err);
@@ -43,7 +44,7 @@ app.get("/feedback/:id", (req, res) => {
     const id = req.params.id.trim();
     Feedback.findById(id)
     .then(result => {
-        res.render("details", { feedback: result, title: "Feedback Details" });
+        // res.render("details", { feedback: result, title: "Feedback Details" });
         console.log(id);
     })
     .catch(err => {
@@ -63,9 +64,9 @@ app.delete("/feedback/:id", (req, res) => {
 })
 
 app.get("/create", (req, res) => {
-    res.render("create", { title: "Create" });
+    // res.render("create", { title: "Create" });
 })
 
 app.use((req, res) => {
-    res.status(404).render("404", { title: "404" });
+    // res.status(404).render("404", { title: "404" });
 })

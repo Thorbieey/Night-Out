@@ -4,7 +4,7 @@ import Header from './components/Header';
 import BookNow from './components/pages/BookNow';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
-// import Feedback from './components/feedback/app';
+import Feedback from './components/feedback/Feedback';
 import './App.css';
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
           <Route path="/" element={<BookNow />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          {/* <Route path="/feedback" element={<Feedback />} /> */}
+          <Route path="/feedback" element={<Feedback />} />
         </Routes>          
     </Router> 
   );
