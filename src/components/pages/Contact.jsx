@@ -4,9 +4,6 @@ import {MdOutlineEmail} from "react-icons/md";
 import {RiMessengerLine} from "react-icons/ri";
 import emailjs from "emailjs-com";
 
-// Contact page with functioning contact form using Emailjs. The phone number isn't my real number - I don't want that to be accessible to people I don't know.
-
-
 function Contact() {
   const form = useRef();
 
