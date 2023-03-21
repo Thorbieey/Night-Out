@@ -35,6 +35,12 @@ export default function Navbar() {
                       >
                         Contact
                   </NavLink>
+                  <NavLink
+                      to="/feedback"
+                      className="inline-flex items-center px-2 py-2 text-xl font-bold text-gray-50 hover:text-sky-700 hover:text-2xl hover:drop-shadow-lg no-underline"
+                      >
+                        Feedback
+                  </NavLink>
                 </div>
               </div>
               <div className="hidden sm:ml-6 sm:flex sm:items-center">
