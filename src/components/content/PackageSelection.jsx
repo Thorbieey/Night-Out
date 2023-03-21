@@ -66,13 +66,7 @@ if (selection === "Gold") {
 
     return (
       <body>
-      <div className="w-full h-full bg-no-repeat bg-cover"> 
-      <div style={{
-        width: '1500px',
-        height: '500px',
-        backgroundSize:'cover',
-        backgroundImage: 'url(" /assets/background-images/Band3.png")'
-      }}></div>
+      
       <div className="py-24 sm:py-32">
         
 
@@ -128,6 +122,13 @@ if (selection === "Gold") {
           </ul>
         </div>
       </div>
+      <div className="w-full h-full bg-no-repeat bg-cover"> 
+      <div style={{
+        width: '1500px',
+        height: '500px',
+        backgroundSize:'cover',
+        backgroundImage: 'url(" /assets/background-images/Band3.png")'
+      }}></div>
       </div>
       </body>
     )
