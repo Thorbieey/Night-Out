@@ -4,6 +4,7 @@ import Header from './components/Header';
 import BookNow from './components/pages/BookNow';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
+import Feeback from './components/pages/Feedback';
 import './App.css';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Routes >
           <Route path="/" element={<BookNow />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>          
     </Router> 
