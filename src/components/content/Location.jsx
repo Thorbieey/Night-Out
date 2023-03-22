@@ -9,14 +9,14 @@ const locations = [
     code:  "602",
     codeBook: "2601889",
     icon: CloudArrowUpIcon,
-    imageURL: '/assets/locations/London.png',
+    imageURL: '/assets/images/locations/London.png',
   },
   {
     name: 'South',
     code:  "603",
     codeBook: "2590884",
     icon: LockClosedIcon,
-    imageURL: '/assets/locations/South.png',
+    imageURL: '/assets/images/locations/South.png',
 
 
   },
@@ -25,43 +25,43 @@ const locations = [
     code:  "605",
     codeBook: "2602512",
     icon: ServerIcon,
-    imageURL: '/assets/locations/NorthWest.png',
+    imageURL: '/assets/images/locations/NorthWest.png',
   },
   {
     name: 'North and North East',
     code:  "606",
     codeBook: "2603966",
     icon: CloudArrowUpIcon,
-    imageURL: '/assets/locations/NorthEast.png',
+    imageURL: '/assets/images/locations/NorthEast.png',
   },
   {
     name: 'Midlands and Central',
     code:  "604",
     codeBook: "2589989",
     icon: LockClosedIcon,
-    imageURL: '/assets/locations/Midlands.png',
+    imageURL: '/assets/images/locations/Midlands.png',
   },
   {
     name: 'Scotland',
     code:  "607",
     codeBook: "2597039",
     icon: ServerIcon,
-    imageURL: '/assets/locations/Scotland.png',
+    imageURL: '/assets/images/locations/Scotland.png',
   },
   {
     name: 'Northern Ireland.',
     code:  "609",
     codeBook: "2589607",
     icon: ServerIcon,
-    imageURL: '/assets/locations/NIreland.png',
+    imageURL: '/assets/images/locations/NIreland.png',
   },
   {
     name: 'All of Ireland',
     code:  "608",
     codeBook: "1502554",
     icon: ServerIcon,
-    imageURL: '/assets/locations/Ireland.png',
-  },
+    imageURL: '/assets/images/locations/Ireland.png',
+  }
 
 ]
 
@@ -79,11 +79,11 @@ if (click === "click") {
   localStorage.setItem("bookCode", JSON.stringify(bookCode));
 
   console.log(bookCode)
-  return <> <PackageSelection/> </>
+  return (<PackageSelection/>)
 }
 
   return ( 
-    <body>
+  <>
     
     <div className="overflow-hidden py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -130,6 +130,6 @@ if (click === "click") {
         backgroundImage: 'url(" /assets/background-images/Band2.png")'
       }}></div>
       </div>
-    </body>
+      </>
   )
 }
