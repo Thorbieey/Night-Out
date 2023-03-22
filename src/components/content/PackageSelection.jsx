@@ -37,17 +37,17 @@ const selections = [
   ]
   
   
-  export default function selection() {
+  export default function Selector() {
     const [selection, setSelections] = useState("")
 
-    if (selection === "Bronze") { 
+    if (selection === "Bronze Package") { 
   return (<PackageBronze/>) 
  
-} if (selection === "Silver") {
+} if (selection === "Silver Package") {
   return (<PackageSilver/>) 
 
 }
-if (selection === "Gold") {
+if (selection === "Gold Package") {
   return (<PackageGold/>) 
 
 }
@@ -70,8 +70,8 @@ if (selection === "Gold") {
             role="list"
             className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
           >
-            {selections.map((selections) => (
-              <li key={selections} className="bg-white rounded shadow md p-2">
+            {selections.map((selections,i) => (
+              <li key={i} className="bg-white rounded shadow md p-2">
                 <img className="aspect-[3/2] w-full rounded-2xl object-cover" src={selections.imageUrl} alt="" />
                 <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-700 text-center">{selections.name}</h3>
                 <h5 className="mt-6 text-base font-semibold leading-8 tracking-tight text-gray-600 text-center">{selections.des}</h5>
@@ -92,7 +92,7 @@ if (selection === "Gold") {
                         />
                       </svg>
                     <button
-               type="button" onClick={function Selection (event) {
+               type="button" onClick={function Select (event) {
                 event.preventDefault()
                 setSelections(selections.name)
                 console.log(selections.name)
