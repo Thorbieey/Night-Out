@@ -6,7 +6,7 @@ const app = express();
 
 const dbaccess = "mongodb+srv://bertiemoogle2:!KlAnGBertie1964@cluster0.9iubflu.mongodb.net/nightout?retryWrites=true&w=majority";
 mongoose.connect(dbaccess)
-    .then((result) => app.listen(3000))
+    .then((result) => app.listen(3001))
     .catch((err) => console.log(err));
 
 app.set("view engine", "ejs");
