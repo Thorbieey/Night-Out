@@ -66,7 +66,6 @@ const locations = [
 ]
 
 export default function Example() {
-  const [location, setLocation] = useState("")
   const [code, setCode] = useState("")
   const [bookCode, setBook] = useState("")
 const [click, setClick] = useState("")
@@ -106,7 +105,6 @@ if (click === "click") {
                    <button
           type="button" onClick={function location(event) {
             event.preventDefault()
-            setLocation(locations.name)
             setCode (locations.code)
             setBook (locations.codeBook)
             setClick("click")
