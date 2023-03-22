@@ -5,31 +5,26 @@ import BookNow from './components/pages/BookNow';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
 import Feedback from './components/feedback/Feedback';
-import Footer from './components/navigation/Footer';
+
+import FavArtists from './components/pages/FavArtists';
+import FavRestaurants from './components/pages/FavRestaurants';
+
 import './App.css';
 
 function App() {
   return ( 
    <Router>   
         <Header/>  
-        {/* <Routes>
-          <Route path="/" element={<Dashboard />}>
-            <Route
-              path="messages"
-              element={<DashboardMessages />}
-            />
-            <Route path="tasks" element={<DashboardTasks />} />
-          </Route>
-          <Route path="about" element={<AboutPage />} />
-        </Routes> */}
-        
         <Routes >
           <Route path="/" element={<BookNow />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/feedback" element={<Feedback />} />
-        </Routes> 
-        <Footer/>         
+
+          <Route path="/fav-artists" element={<FavArtists />} />
+          <Route path="/fav-restaurants" element={<FavRestaurants />} />
+        </Routes>          
+
     </Router> 
   );
 }
