@@ -2,17 +2,6 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon, StarIcon } from '@heroicons/react/24/outline'
 import { NavLink } from 'react-router-dom';
-// import Logo from '../../../public/assets/images/logo/night-out-logo.png';
-
-const logo = [
-  {
-    name: 'night-out',
-    des: 'website logo',
-    imageUrl:
-      '/assets/images/logo/night-out-logo.png',
-   
-  }
-]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -76,28 +65,28 @@ export default function Navbar() {
                     <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-amber-100 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none no-underline">
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
+                          <NavLink
+                            to="fav-artists"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700 no-underline')}
                           >
-                             <div className= "flex flex-wrap content-center">
+                            <div className= "flex flex-wrap content-center">
                               <StarIcon className="h-7 w-7 stroke-2 fill-amber-100 stroke-indigo-900"/>
                               <p className="my-0 ml-2 pt-2 text-indigo-900 text-lg leading-3">Artists</p>
-                             </div>
-                          </a>
+                            </div>
+                          </NavLink>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
+                          <NavLink
+                            to="/fav-restaurants"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700 no-underline')}
                           >
                             <div className= "flex flex-wrap content-center">
                               <StarIcon className="h-7 w-7 stroke-2 fill-amber-100 stroke-indigo-900"/>
                               <p className="my-0 ml-2 pt-2 text-indigo-900 text-lg leading-3 align-bottom">Restaurants</p>
                             </div>
-                          </a>
+                          </NavLink>
                         )}
                       </Menu.Item>
                     </Menu.Items>
