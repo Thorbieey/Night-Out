@@ -1,16 +1,20 @@
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
-import { useState } from 'react'
+import { useState, useEffect  } from 'react'
 import PackageSelection from './PackageSelection'
 
 
 const locations = [
   {
     name: 'London',
+    code:  "602",
+    codeBook: "2601889",
     icon: CloudArrowUpIcon,
     imageURL: '/assets/images/locations/London.png',
   },
   {
     name: 'South',
+    code:  "603",
+    codeBook: "2590884",
     icon: LockClosedIcon,
     imageURL: '/assets/images/locations/South.png',
 
@@ -18,46 +22,68 @@ const locations = [
   },
   {
     name: 'Wales and North West',
+    code:  "605",
+    codeBook: "2602512",
     icon: ServerIcon,
     imageURL: '/assets/images/locations/NorthWest.png',
   },
   {
     name: 'North and North East',
+    code:  "606",
+    codeBook: "2603966",
     icon: CloudArrowUpIcon,
     imageURL: '/assets/images/locations/NorthEast.png',
   },
   {
     name: 'Midlands and Central',
+    code:  "604",
+    codeBook: "2589989",
     icon: LockClosedIcon,
     imageURL: '/assets/images/locations/Midlands.png',
   },
   {
     name: 'Scotland',
+    code:  "607",
+    codeBook: "2597039",
     icon: ServerIcon,
     imageURL: '/assets/images/locations/Scotland.png',
   },
   {
     name: 'Northern Ireland.',
+    code:  "609",
+    codeBook: "2589607",
     icon: ServerIcon,
     imageURL: '/assets/images/locations/NIreland.png',
   },
   {
     name: 'All of Ireland',
+    code:  "608",
+    codeBook: "1502554",
     icon: ServerIcon,
     imageURL: '/assets/images/locations/Ireland.png',
-  },
+  }
 
 ]
 
 export default function Example() {
-  const [location, setLocation] = useState("")
+  const [code, setCode] = useState("")
+  const [bookCode, setBook] = useState("")
 const [click, setClick] = useState("")
+
+
+
+
 if (click === "click") {
-  return <> <PackageSelection location = {{location: location}}/>  </>
+  console.log(code)
+  localStorage.setItem("cityCode", JSON.stringify(code));
+  localStorage.setItem("bookCode", JSON.stringify(bookCode));
+
+  console.log(bookCode)
+  return (<PackageSelection/>)
 }
 
   return ( 
-    <body>
+  <>
     
     <div className="overflow-hidden py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -79,7 +105,8 @@ if (click === "click") {
                    <button
           type="button" onClick={function location(event) {
             event.preventDefault()
-            setLocation(locations.name)
+            setCode (locations.code)
+            setBook (locations.codeBook)
             setClick("click")
           }}
           className="rounded-full bg-gray-600 py-2 px-3.5 text-sm uppercase font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
@@ -103,6 +130,6 @@ if (click === "click") {
         backgroundImage: 'url(" /assets/background-images/Band2.png")'
       }}></div>
       </div>
-    </body>
+      </>
   )
 }

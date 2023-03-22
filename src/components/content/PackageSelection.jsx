@@ -4,17 +4,6 @@ import PackageSilver from "./PackageSilver"
 import PackageGold from "./PackageGold"
 
 
-
-
-// switch (selection,location) {
-//   case selection === "Bronze": return <PackageBronze location = {{location:location.name}}/> 
-//     case selection === "Silver": return <PackageSilver location = {{location:location.name}}/> 
-//     case selection === "Gold": return <PackageGold location = {{location:location.name}}/> 
-
-//   default:
-//     break;
-// }
-
 const selections = [
     {
       name: 'Bronze Package',
@@ -27,7 +16,7 @@ const selections = [
     },
     {
       name: 'Silver Package',
-      des: 'Live gig + accomodation booking',
+      des: 'Live gig + accommodation booking',
       selection: 'Book a Gig',
       selection2: 'Book Accommodation',
       imageUrl:
@@ -36,7 +25,7 @@ const selections = [
     },
     {
       name: 'Gold Package',
-      des: 'Live gig + restaurant booking + accomodation booking + travel information',
+      des: 'Live gig + restaurant booking + accommodation booking + travel information',
       selection: 'Book a Gig',
       selection2: 'Book Accommodation',
       selection3: "Book a Restaurant",
@@ -48,24 +37,24 @@ const selections = [
   ]
   
   
-  export default function Example({location}) {
+  export default function selection() {
     const [selection, setSelections] = useState("")
 
     if (selection === "Bronze") { 
-  return <PackageBronze location = {{location:location.location}}/> 
+  return (<PackageBronze/>) 
  
 } if (selection === "Silver") {
-  return <PackageSilver location = {{location:location.location}}/> 
+  return (<PackageSilver/>) 
 
 }
 if (selection === "Gold") {
-  return <PackageGold location = {{location:location.location}}/> 
+  return (<PackageGold/>) 
 
 }
   
 
     return (
-      <body>
+      <>
       
       <div className="py-24 sm:py-32">
         
@@ -94,7 +83,6 @@ if (selection === "Gold") {
                       </svg>
                   </li>
                   <li>
-                  <h5>Location: {location.location}</h5>
                       <span className="sr-only">LinkedIn</span>
                       <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                         <path
@@ -130,7 +118,7 @@ if (selection === "Gold") {
         backgroundImage: 'url(" /assets/background-images/Band3.png")'
       }}></div>
       </div>
-      </body>
+      </>
     )
   }
   
