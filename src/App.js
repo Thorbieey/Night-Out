@@ -5,6 +5,7 @@ import BookNow from './components/pages/BookNow';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
 import Feedback from './components/feedback/Feedback';
+import Footer from './components/navigation/Footer';
 import './App.css';
 
 function App() {
@@ -27,7 +28,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/feedback" element={<Feedback />} />
-        </Routes>          
+        </Routes> 
+        <Footer/>         
     </Router> 
   );
 }
