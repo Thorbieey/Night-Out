@@ -3,7 +3,7 @@ import Restaurant from './Restaurant'
 import SearchLocation from './searchLocation/SearchLocation'
 
 export default function FindRestaurants() {
-    const [city, setCity] = useState("birmingham");
+    const [city, setCity] = useState("london");
     const [resultsData, setResultsData] = useState([]);
 
     // const [click, setClick] = useState("");
@@ -29,7 +29,7 @@ export default function FindRestaurants() {
       };
     return (
         <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <h5> Where are we dining tonight?</h5>
+            <h2 className="m-8 text-5xl font-bold tracking-tight text-amber-100 sm:text-4xl text-center">Where are we dining tonight?</h2>
             <SearchLocation
             handleInputChange={handleInputChange}
             results={resultsData}
