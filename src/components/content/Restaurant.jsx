@@ -11,15 +11,15 @@ const options = {
 };
 
 // Export object for auto-completeing location and finding restaurants nearby from TheForkTheSpoon API
-export default {
-  searchLocation: function(location) {    
-    return getGeolocation(location);
-  }
-};
+// export default {
+//   searchLocation: function(location) {    
+//     return getGeolocation(location);
+//   }
+// };
 
 // getGeolocation()
 // Function to find lon, lat and city id for searched city
-function getGeolocation(location) {
+export default function Restaurant(location) {
     // get info on location full address, lat/lon and location id for restaurant search
     axios.get(`https://the-fork-the-spoon.p.rapidapi.com/locations/v2/auto-complete?text=${location}`, options)
         .then(completedLocation => {
