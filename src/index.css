@@ -182,7 +182,7 @@ input, textarea {
     text-align: left;
     padding: 20px;
     margin-top: 30px;
-    width: 920px !important;
+    width: 920px;
     height: auto;
     line-height: 1.5rem;
     background: rgba(255, 255, 255, 0.2);
@@ -223,7 +223,7 @@ span {
 
 /** ABOUT PAGE **/
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
     h1 {
       font-size: 36px;
     }
@@ -237,7 +237,7 @@ span {
       width: 100%;
       height: auto;
     }
-  }
+  } */
   
   @media (max-width: 600px) {
     h1 {
