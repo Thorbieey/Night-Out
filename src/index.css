@@ -2,11 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
 /** CONTACT PAGE **/
   
-
 body {
     background-image: url('https://unsplash.com/photos/aWXVxy8BSzc');
     background-color: rgb(5, 5, 62) !important;
@@ -21,6 +20,7 @@ h1 {
 }
 
 .headerFont {
+    margin-bottom: 50px;
     font-size: 4rem;
     font-weight: 600;
 }
@@ -70,8 +70,6 @@ article:hover {
     opacity: 1;
 }
 
-
-
 .contact-icon {
     margin: 0 auto;
     text-align: center;
@@ -97,13 +95,115 @@ input, textarea {
 
 .custom-btn{
     background-color: #6366f1 !important;
+    width: 200px;
 }
 
-/** BUILD A PACKAGE PAGE **/
+/** END OF CONTACT PAGE CSS **/
 
+/** ABOUT PAGE **/
 
+.card-link {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+.card-link:hover {
+    color: rgb(121, 96, 250)
+}
+  
+.team-member-card h2 {
+    font-size: 36px;
+    padding: 10px;
+}
+  
+.team-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+  
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+}
+  
+.team-member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px !important;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px white;
+    transition: 0.2s ease-in-out;
+  
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+  
+.team-member-card:hover {
+      transform:translateY(-5px);
+      box-shadow: 0px 0px 8px white;
+}
+  
+.team-member-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 0px 8px white;
+    margin-bottom: 20px;
+}
+  
+.team-member-card h3 {
+    font-size: 24px;
+    margin: 10px 0 5px;
+    padding-bottom: 10px;
+}
+  
+.team-member-card h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+  
+.team-member-card p {
+    font-size: 16px;
+    text-align: center;
+}
+  
+.biographies {
+    text-align: left;
+    padding: 20px;
+    margin-top: 30px;
+    width: 920px !important;
+    height: auto;
+    line-height: 1.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+  
+span {
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(121, 96, 250);
+}
+
+/** END OF ABOUT PAGE CSS **/
 
 /* ############### MEDIA QUERIES ################# */
+
+/** CONTACT PAGE **/
 
 @media screen and (max-width: 1024px) {
     .container.contact-container {
@@ -117,4 +217,87 @@ input, textarea {
         grid-template-columns: 1fr;
         width: 100%
     }
-}
+} 
+
+/** END OF CONTACT PAGE MEDIA QUERIES**/
+
+/** ABOUT PAGE **/
+
+@media (max-width: 600px) {
+    h1 {
+      font-size: 36px;
+    }
+  
+    .team-member-card img {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .biographies {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 42px;
+    }
+  
+    .team-members {
+      grid-template-columns: repeat(1, 1fr);
+      width: 75%;
+    }
+  
+    .team-member-card img {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .biographies {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media (min-width: 600px) and (max-width: 900px) {
+    h1 {
+      font-size: 42px;
+    }
+  
+    .team-members {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .team-member-card img {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .biographies {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media (min-width: 900px) {
+    h1 {
+      font-size: 48px;
+    }
+  
+    .team-members {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  
+    .team-member-card img {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .biographies {
+      width: 900px;
+      height: auto;
+    }
+  }
+
+  /** END OF ABOUT PAGE MEDIA QUERIES **/
