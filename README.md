@@ -77,6 +77,8 @@ Nicola sees her accomodation for each city
 - Ticketmaster API
 - Booking.com API
 - theForkTheSpoon API
+- EJS
+- MongoDB
 
 Our market research revealed a real world problem in the form of the lack of an app which combined the ability to book concert tickets and then book accomodation in the area local to the concert venue. We set out to do this by using Ticketmaster's API combined with Airbnb's API. Unfortunately, Airbnb are very precious about who uses their API, so we eventually decided to use Booking.com's API via the website Rapidapi.com.
 
@@ -122,7 +124,9 @@ When contributing to this repository, please first discuss the change you wish t
 ---
 ## Credits
 
-- [Learn about path.js](https://nodejs.org/api/path.html#pathjoinpaths)
+- [Learn about **axios**](https://axios-http.com/docs/api_intro)
+
+- [Responsive Animated Image Cards in Tailwind CSS](https://www.youtube.com/watch?v=rouUtUIZgxU&feature=youtu.be&ab_channel=TailwindCSSSnippets)
 
 ---
 ## Questions

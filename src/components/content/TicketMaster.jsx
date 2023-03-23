@@ -15,7 +15,7 @@ export default function Ticket() {
 
     const fetchTicket = async () => {
 
-        const response = await axios.get(`https://app.ticketmaster.com/discovery/v2/events.json?keyword=pink&dmaId=603&apikey=I71rSGwulwznNcHFcIbcGrwcHuC0T9S6`)
+        const response = await axios.get(`https://app.ticketmaster.com/discovery/v2/events.json?keyword=abba&dmaId=603&apikey=I71rSGwulwznNcHFcIbcGrwcHuC0T9S6`)
 
         // setTicket(response.data._embedded.events[0])
         setName(response.data._embedded.events[0].name)
@@ -60,8 +60,8 @@ export default function Ticket() {
                         onClick={function submit() {
                           setClick("click")        
                         }}
-                        className="mt-6 flex flex-shrink-0 items-center justify-center rounded-md border border-white border-opacity-25 bg-white bg-opacity-0 py-3 px-4 text-base font-medium text-indigo-700 hover:bg-opacity-10 sm:mt-0 sm:ml-8 lg:ml-0 lg:w-full"
-                    >
+                        className="rounded-full bg-gray-600 m-3 py-2 px-3.5 text-sm uppercase font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                        >
                         View Restaurants within Area
                     </button>
                 </div>
