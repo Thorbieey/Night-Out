@@ -17,49 +17,46 @@ export default function FindRestaurants() {
           return;
         }
 
-        async function test(){
-            let eq = await Restaurant.searchLocation(city)
-          console.log(eq)
+        async function getRestaurants(){
+            let restaurants = await Restaurant.searchLocation(city)
+            console.log(restaurants)
 
         }
-    test()
+        getRestaurants();
+        const handleInputChange = event => {
+            setCity(event.target.value);
+          };
+        
         
           
     }, [city]);
     
     return (
-        <div>
-            <ul role="list" className="space-y-3">
-                {items.map((item) => (
-                <li key={item.id} className="overflow-hidden bg-white mt-5 mr-10 px-4 py-4 shadow sm:rounded-md sm:px-6">
-                    <div className="bg-white">
-                        <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl">
-                            <div className="relative overflow-hidden rounded-lg lg:h-96">
-                            <div className="absolute inset-0">
-                                <img
-                                    src=""
-                                    alt=""
-                                    className="h-full w-full object-cover object-center"
-                                />
-                            </div>
-                            <div aria-hidden="true" className="relative h-96 w-full lg:hidden" />
-                            <div aria-hidden="true" className="relative h-32 w-full lg:hidden" />
-                            <div className="absolute inset-x-0 bottom-0 rounded-bl-lg rounded-br-lg bg-black bg-opacity-75 p-6 backdrop-blur backdrop-filter sm:flex sm:items-center sm:justify-between lg:inset-y-0 lg:inset-x-auto lg:w-96 lg:flex-col lg:items-start lg:rounded-tl-lg lg:rounded-br-none">
-                                <div>
-                                    <h2  className="text-xl font-bold text-white"></h2>
-                                    <h5 className="text-xl font-bold text-white"> </h5>
-                                    <h6 className="text-xl font-bold text-white"> </h6>
-                                    <h6 className="text-xl font-bold text-white"></h6>
-                                    <a className="rounded-full bg-indigo-600 py-1 px-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="" role="button" target="_blank" rel="noreferrer">Book Now</a>
-                                    <p className="mt-1 text-sm text-gray-300"> Upgrade your desk with objects that keep you organized and clear-minded.</p>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                ))}
-            </ul>
+        <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <h3>Step 1</h3>
+            <h5> Pick Your Artist</h5>
+            <div>
+                <label htmlFor="name" className="ml-px block pl-4 text-sm font-medium leading-6 text-gray-900">
+                Artist
+                </label>
+                <div className="mt-2">
+                    <input 
+                        onChange = {handleInputChange}
+                        type="text"
+                        name="location"
+                        id="location-1"
+                        className="block w-full rounded-full border-0 px-4 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        placeholder="Enter City Name!"
+                    />
+                    <button
+                        type="button" 
+                        onClick={handleFormSubmit}
+                        className="rounded-full bg-indigo-600 py-1.5 px-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    >
+                        Submit
+                    </button>
+                </div>
+            </div>
         </div>
     )
 }
