@@ -127,7 +127,7 @@ input, textarea {
 .team-members {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 28px;
+    gap: 20px;
 }
   
 .team-member-card {
