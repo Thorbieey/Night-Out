@@ -11,17 +11,18 @@ const options = {
 };
 
 // Export object for auto-completeing location and finding restaurants nearby from TheForkTheSpoon API
-// export default {
-//   searchLocation: function(location) {    
-//     return getGeolocation(location);
-//   }
-// };
+export default {
+  searchLocation: async function(location) {  
+    let data = await getGeolocation(location)  
+    return data;
+  }
+};
 
 // getGeolocation()
 // Function to find lon, lat and city id for searched city
-export default function Restaurant(location) {
+function getGeolocation(location) {
     // get info on location full address, lat/lon and location id for restaurant search
-    axios.get(`https://the-fork-the-spoon.p.rapidapi.com/locations/v2/auto-complete?text=${location}`, options)
+   return axios.get(`https://the-fork-the-spoon.p.rapidapi.com/locations/v2/auto-complete?text=${location}`, options)
         .then(completedLocation => {
             // retrieve autocompleted location id, name & type
             let locationId = completedLocation.data.data.geolocation[0].id.id;
@@ -41,7 +42,7 @@ export default function Restaurant(location) {
 // Function to find restaurants available in searched city
 function getRestaurants(cityId) {
     // get list of restaurant in nearby
-    axios.get(`https://the-fork-the-spoon.p.rapidapi.com/restaurants/v2/list?queryPlaceValueCityId=${cityId}&pageSize=10&pageNumber=1`, options)
+    return axios.get(`https://the-fork-the-spoon.p.rapidapi.com/restaurants/v2/list?queryPlaceValueCityId=${cityId}&pageSize=10&pageNumber=1`, options)
         .then(restaurants => {
             // retrieve restaurant data
             let restaurantsData = restaurants.data.data

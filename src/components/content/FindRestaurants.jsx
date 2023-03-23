@@ -7,20 +7,24 @@ const items = [
     // More items...
   ]
 export default function FindRestaurants() {
-    const [city, setCity] = useState("");
+    const [city, setCity] = useState("birmingham");
     const [click, setClick] = useState("");
     const [error, setError] = useState("");
 
     useEffect(() => {
         if (!city) {
+            console.log("no city")
           return;
         }
-    
-        Restaurant.searchLocation(city)
-          .then(res => {
-            console.log(res)
-            
-          })
+
+        async function test(){
+            let eq = await Restaurant.searchLocation(city)
+          console.log(eq)
+
+        }
+    test()
+        
+          
     }, [city]);
     
     return (
