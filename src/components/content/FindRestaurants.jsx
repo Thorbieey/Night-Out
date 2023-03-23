@@ -17,19 +17,21 @@ export default function FindRestaurants() {
 
         async function getRestaurants(){
             let restaurants = await Restaurant.searchLocation(city)
-            console.log(restaurants)
+            // console.log(restaurants)
             setResultsData([...restaurants])
         }
         getRestaurants();     
     }, [city]);
 
  
-    
+    const handleInputChange = event => {
+        setCity(event.target.value);
+      };
     return (
         <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <h5> Where are we dining tonight?</h5>
             <SearchLocation
-           
+            handleInputChange={handleInputChange}
             results={resultsData}
             />
         </div>
