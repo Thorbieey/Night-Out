@@ -20,7 +20,7 @@ function Contact() {
 
   return (
     <div>
-      <h1 className="headerFont">Contact</h1>
+      <h1 className="headerFont text-amber-100">Contact</h1>
       <div className="container contact-container">
         <div className="contact-options">
           <article classname="contact-option">
@@ -47,7 +47,7 @@ function Contact() {
           <input type="text" name="name" placeholder="Your full name..." required />
           <input type="email" name="email" placeholder="Your email..." required />
           <textarea name="message" rows="10" placeholder="Your message here..." required></textarea>
-          <button type="submit" className="btn btn-primary">Send Message</button>
+          <button type="submit" className="btn custom-btn">Send Message</button>
         </form>
       </div>
     </div>

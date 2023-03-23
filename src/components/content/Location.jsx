@@ -74,11 +74,11 @@ const [click, setClick] = useState("")
 
 
 if (click === "click") {
-  console.log(code)
+  // console.log(code)
   localStorage.setItem("cityCode", JSON.stringify(code));
   localStorage.setItem("bookCode", JSON.stringify(bookCode));
 
-  console.log(bookCode)
+  // console.log(bookCode)
   return (<PackageSelection/>)
 }
 
@@ -89,7 +89,7 @@ if (click === "click") {
 
     <h2 className="text-3xl font-bold tracking-tight text-amber-100 sm:text-4xl text-center">Pick Your Location</h2>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="flex min-h-screen items-center justify-center bg-gray-900">
+      <div className="flex min-h-screen items-center justify-center bg-gray-900">
         
         <div className="mx-auto grid max-w-2xl grid-cols-4 gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-1">
           <div className="lg:pr-8 lg:pt-4">
@@ -103,12 +103,12 @@ if (click === "click") {
                 {locations.map((locations) => (
                   
                   <div key={locations.name} className="relative pl-9">
-                    <div class="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+                    <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
      
                     <img className="rounded h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125" src={locations.imageURL} alt="" />
-                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
-      <div class="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
-                    <h1 class="font-dmserif text-3xl font-bold text-white">{locations.name}</h1>
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+      <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+                    <h1 className="font-dmserif text-3xl font-bold text-white">{locations.name}</h1>
                    
                     
 

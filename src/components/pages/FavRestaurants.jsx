@@ -25,15 +25,15 @@ export default function FavRestaurants() {
             Favourite Restaurants
         </h1>
         <div className="container  p-0">
-            <ul role="list" className="space-y-3 bg-amber-100 m-2">
+            <ul className="space-y-3 bg-amber-100 m-2">
                 {Restaurants.map((Restaurant) => (
                 <li key={Restaurant.id} className="overflow-hidden px-4 py-4 shadow sm:rounded-md sm:px-6">
-                    <h1 className="m-0 py-1 text-2xl font-semibold leading-8 tracking-tight text-gray-700 text-center uppercase">
+                    <h1 className="m-0 py-1 text-2xl font-semibold leading-8 tracking-tight text-indigo-900 text-center uppercase">
                             {Restaurant.name}
                             <span className="ml-3 text-xl font-bold leading-8 tracking-tight text-red-700">{Restaurant.rating}</span>
                     </h1>
                     <img src={Restaurant.imgUrl} alt="restaurant" className="aspect-[3/2] w-full rounded-2xl object-cover"/>
-                    <p className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-700 text-center">{Restaurant.address}</p>
+                    <p className="mt-6 text-lg font-semibold leading-8 tracking-tight text-indigo-900 text-center">{Restaurant.address}</p>
                 </li>
                 ))}
             </ul>
