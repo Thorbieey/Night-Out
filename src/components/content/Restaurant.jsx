@@ -1,6 +1,6 @@
 import axios from "axios";
 
-let locationInput = "birmingham";
+// let locationInput = "birmingham";
 
 const options = {
     method: 'GET',
@@ -17,11 +17,11 @@ export default {
   }
 };
 
-getGeolocation()
+// getGeolocation()
 // Function to find lon, lat and city id for searched city
-function getGeolocation() {
+function getGeolocation(location) {
     // get info on location full address, lat/lon and location id for restaurant search
-    axios.get(`https://the-fork-the-spoon.p.rapidapi.com/locations/v2/auto-complete?text=${locationInput}`, options)
+    axios.get(`https://the-fork-the-spoon.p.rapidapi.com/locations/v2/auto-complete?text=${location}`, options)
         .then(completedLocation => {
             // retrieve autocompleted location id, name & type
             let locationId = completedLocation.data.data.geolocation[0].id.id;
@@ -45,7 +45,7 @@ function getRestaurants(cityId) {
         .then(restaurants => {
             // retrieve restaurant data
             let restaurantsData = restaurants.data.data
-            return console.log(restaurantsData[0].address)
+            return restaurantsData
         })
         .catch(err => console.error(err));
 }

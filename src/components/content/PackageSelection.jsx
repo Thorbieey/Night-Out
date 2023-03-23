@@ -95,7 +95,7 @@ if (selection === "Gold Package") {
                type="button" onClick={function Select (event) {
                 event.preventDefault()
                 setSelections(selections.name)
-                console.log(selections.name)
+                // console.log(selections.name)
                }}
                className="rounded-full bg-gray-600 py-2 px-3.5 text-sm uppercase font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
              >
