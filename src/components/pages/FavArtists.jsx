@@ -26,9 +26,9 @@ export default function FavArtists() {
             <ul role="list" className="space-y-3 bg-amber-100 m-2">
                 {Artists.map((Artist) => (
                 <li key={Artist.id} className="overflow-hidden px-4 py-4 shadow sm:rounded-md sm:px-6">
-                    <h1 className="m-0 py-1 text-2xl font-semibold leading-8 tracking-tight text-gray-700 text-center uppercase">{Artist.name}</h1>
+                    <h1 className="m-0 py-1 text-2xl font-semibold leading-8 tracking-tight text-indigo-900 text-center uppercase">{Artist.name}</h1>
                     <img src={Artist.imgUrl} alt="restaurant" className="aspect-[3/2] w-full rounded-2xl object-cover"/>
-                    <p className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-700 text-center">{Artist.info}</p>
+                    <p className="mt-6 text-lg font-semibold leading-8 tracking-tight text-indigo-900 text-center">{Artist.info}</p>
                 </li>
                 ))}
             </ul>
