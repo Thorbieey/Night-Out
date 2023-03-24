@@ -91,7 +91,7 @@ if (click === "click") {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
       <div className="flex min-h-screen items-center justify-center bg-gray-900">
         
-        <div className="mx-auto grid max-w-2xl grid-cols-4 gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-1">
+      <div className="mx-auto grid max-w-2xl grid-cols-4 gap-y-16 gap-x-8 sm:grid-cols-1 sm:max-w-none md:grid-cols-1 md:max-w-none lg:mx-0 lg:max-w-none lg:grid-cols-1">
           <div className="lg:pr-8 lg:pt-4">
             <div className="lg:max-w-lg">
   

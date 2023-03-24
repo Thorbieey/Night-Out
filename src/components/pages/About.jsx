@@ -43,7 +43,7 @@ const About = () => {
 
 	return (
 		<div className="team-page">
-			<h1 className="headerFont">Meet The Team</h1>
+			<h1 className="headerFont text-amber-100">Meet The Team</h1>
 			<div className="team-members">
 			{teamMembers.map((teamMembers) => (
 				<TeamMemberCard
