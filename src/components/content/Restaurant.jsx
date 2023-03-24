@@ -5,7 +5,7 @@ import axios from "axios";
 const options = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': 'effe14985cmsh962d7b641918161p1bf3e5jsn92b6af363b24',
+        'X-RapidAPI-Key': '9923b3e67fmshe4b67df2e2f7676p127752jsn6b7ae75eb3eb',
         'X-RapidAPI-Host': 'the-fork-the-spoon.p.rapidapi.com'
     }
 };

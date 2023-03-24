@@ -61,10 +61,10 @@ Nicola sees her accomodation for each city
 
 ### Screenshots/Demo
 
-![Screenshot-1](./public/assets/read-me-images/screenshot-1.jpg)
-![Screenshot-2](./public/assets/read-me-images/screenshot-2.jpg)
-![Screenshot-3](./public/assets/read-me-images/screenshot-3.jpg)
-![Gif]()
+![Screenshot-1](./public/assets/images/read-me-images/screenshot-1.png)
+![Screenshot-2](./public/assets/images/read-me-images/screenshot-2.png)
+![Screenshot-3](./public/assets/images/read-me-images/screenshot-3.png)
+![Gif](./public/assets/images/read-me-images/night-out-demo.gif)
 
 ---
 ## Technology
