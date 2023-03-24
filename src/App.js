@@ -5,6 +5,7 @@ import BookNow from './components/pages/BookNow';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
 import Feedback from './components/feedback/Feedback';
+import Footer from './components/navigation/Footer';
 
 import TicketMaster from './components/content/TicketMaster'
 
@@ -33,7 +34,7 @@ function App() {
           <Route path="/fav-restaurants" element={<FavRestaurants />} />
 
         </Routes>          
-
+        <Footer/>
     </Router> 
   );
 }

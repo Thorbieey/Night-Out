@@ -87,12 +87,14 @@ if (click === "click") {
     
     <div className="overflow-hidden py-24 sm:py-32">
 
-    <h2 className="text-3xl font-bold tracking-tight text-amber-100 sm:text-4xl text-center">Pick Your Location</h2>
+    
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
+     
       <div className="flex min-h-screen items-center justify-center bg-gray-900">
         
-      <div className="mx-auto grid max-w-2xl grid-cols-4 gap-y-16 gap-x-8 sm:grid-cols-1 sm:max-w-none md:grid-cols-1 md:max-w-none lg:mx-0 lg:max-w-none lg:grid-cols-1">
-          <div className="lg:pr-8 lg:pt-4">
+      <div className="mt-5 mb-5 mx-auto grid max-w-2xl grid-cols-4 gap-y-16 gap-x-8 sm:grid-cols-1 sm:max-w-none md:grid-cols-1 md:max-w-none lg:mx-0 lg:max-w-none lg:grid-cols-1">
+      <h2 className="text-3xl font-bold tracking-tight text-amber-100 sm:text-4xl text-center">Pick Your Location</h2>
+          <div className="columns-2 lg:pr-8 lg:pt-4">
             <div className="lg:max-w-lg">
   
 
@@ -135,14 +137,8 @@ if (click === "click") {
         </div>
       </div>
     </div>
-    <div className="w-full h-full bg-no-repeat bg-cover"> 
-      <div style={{
-        width: '1500px',
-        height: '500px',
-        backgroundSize:'cover',
-        backgroundImage: 'url(" /assets/background-images/Band2.png")'
-      }}></div>
-      </div>
+  
+     
       </>
   )
 }
